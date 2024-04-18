@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#main" class="head_skip_hidden">Skip to main content</a>
+        <nav>
+            <img src="images/favicon.png" alt="A pile of books as the website logo" class="head_logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novel.html">Novel</a></li>
+                <li><a href="other.html" id="head_navbar_current">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div id="head_description">
+            <h1>Booklist for Other Literature</h1>
+            <h2 class="head_subtitle">Including dama, poems, etc.</h2>
+        </div>
+        <label class="book_checkbox" id="book_notes">
+            <input type="checkbox" name="book_note_hide" class="book_checkbox_box" onclick="changeNoteStatus(this)" checked>
+            <span>Hide notes to avoid spoilers</span>
+        </label>
+        <br>
+        <label class="book_checkbox" id="book_covers">
+            <input type="checkbox" name="book_cover_hide" class="book_checkbox_box" onclick="changeCoverStatus(this)">
+            <span>Hide covers for a simple view</span>
+        </label>
+        <br>
+        <input type="button" id="display_selection" value="Customize Your Booklist!">
+        <div id="book_selection">
+            <p id="book_selection_hint">Tick books you have read to reorganize the lists below:</p>
+            <label class="book_checkbox" id="book1_box">
+                <input type="checkbox" name="book1_box" class="book_checkbox_box" onclick="changeBookStatus('book1', this)" checked>
+                <span>Iliad</span>
+            </label>
+            <label class="book_checkbox" id="book2_box">
+                <input type="checkbox" name="book2_box" class="book_checkbox_box" onclick="changeBookStatus('book2', this)" checked>
+                <span>Metamorphoses</span>
+            </label>
+            <label class="book_checkbox" id="book3_box">
+                <input type="checkbox" name="book3_box" class="book_checkbox_box" onclick="changeBookStatus('book3', this)" checked>
+                <span>Odyssey</span>
+            </label>
+            <label class="book_checkbox" id="book4_box">
+                <input type="checkbox" name="book4_box" class="book_checkbox_box" onclick="changeBookStatus('book4', this)" checked>
+                <span>The Hot Zone</span>
+            </label>
+            <label class="book_checkbox" id="book5_box">
+                <input type="checkbox" name="book5_box" class="book_checkbox_box" onclick="changeBookStatus('book5', this)" checked>
+                <span>The Seagull</span>
+            </label>
+            <label class="book_checkbox" id="book6_box">
+                <input type="checkbox" name="book6_box" class="book_checkbox_box" onclick="changeBookStatus('book6', this)" checked>
+                <span>Voices from Chernobyl</span>
+            </label>
+
+            <label class="book_checkbox" id="book7_box">
+                <input type="checkbox" name="book7_box" class="book_checkbox_box" onclick="changeBookStatus('book7', this)">
+                <span>Divine Comedy</span>
+            </label>
+            <label class="book_checkbox" id="book8_box">
+                <input type="checkbox" name="book8_box" class="book_checkbox_box" onclick="changeBookStatus('book8', this)">
+                <span>Faust</span>
+            </label>
+            <label class="book_checkbox" id="book9_box">
+                <input type="checkbox" name="book9_box" class="book_checkbox_box" onclick="changeBookStatus('book9', this)">
+                <span>The Book of Imaginary Beings</span>
+            </label>
+            <label class="book_checkbox" id="book10_box">
+                <input type="checkbox" name="book10_box" class="book_checkbox_box" onclick="changeBookStatus('book10', this)">
+                <span>The Golden Bough</span>
+            </label>
+        </div>
+
+        <h2 class="booklist_head" id="booklist_read_head">Book Finished</h2>
+        <div class="booklist" id="booklist_read">
+            <div class="book_block" id="book1">
+                <img src="images/book_cover_other_book1.jpg" alt="Book cover of Iliad" class="book_cover" id="book1_cover">
+                <h3 class="book_title">Iliad</h3>
+                <h4 class="book_author">Homer</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book2">
+                <img src="images/book_cover_other_book2.jpg" alt="Book cover of Metamorphoses" class="book_cover" id="book2_cover">
+                <h3 class="book_title">Metamorphoses</h3>
+                <h4 class="book_author">Ovid</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book3">
+                <img src="images/book_cover_other_book3.jpg" alt="Book cover of Odyssey" class="book_cover" id="book3_cover">
+                <h3 class="book_title">Odyssey</h3>
+                <h4 class="book_author">Homer</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book4">
+                <img src="images/book_cover_other_book4.jpg" alt="Book cover of The Hot Zone" class="book_cover" id="book4_cover">
+                <h3 class="book_title">The Hot Zone</h3>
+                <h4 class="book_author">Richard Preston</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book5">
+                <img src="images/book_cover_other_book5.jpg" alt="Book cover of The Seagull" class="book_cover" id="book5_cover">
+                <h3 class="book_title">The Seagull</h3>
+                <h4 class="book_author">Anton Chekhov</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book6">
+                <img src="images/book_cover_other_book6.jpg" alt="Book cover of Voices from Chernobyl" class="book_cover" id="book6_cover">
+                <h3 class="book_title">Voices from Chernobyl</h3>
+                <h4 class="book_author">Svetlana Alexievich</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="booklist_head" id="booklist_unread_head">Book Unread</h2>
+        <div class="booklist" id="booklist_unread">
+            <div class="book_block" id="book7">
+                <img src="images/book_cover_other_book7.jpg" alt="Book cover of Divine Comedy" class="book_cover" id="book7_cover">
+                <h3 class="book_title">Divine Comedy</h3>
+                <h4 class="book_author">Dante Alighieri</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book8">
+                <img src="images/book_cover_other_book8.jpg" alt="Book cover of Faust" class="book_cover" id="book8_cover">
+                <h3 class="book_title">Faust</h3>
+                <h4 class="book_author">Johann Wolfgang von Goethe</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book9">
+                <img src="images/book_cover_other_book9.jpg" alt="Book cover of The Book of Imaginary Beings" class="book_cover" id="book9_cover">
+                <h3 class="book_title">The Book of Imaginary Beings</h3>
+                <h4 class="book_author">Jorge Luis Borges with Margarita Guerrero</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book10">
+                <img src="images/book_cover_other_book10.jpg" alt="Book cover of The Golden Bough" class="book_cover" id="book10_cover">
+                <h3 class="book_title">The Golden Bough</h3>
+                <h4 class="book_author">James George Frazer</h4>
+                <div class="book_description">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/function.js"></script>
+</body>
+
+</html>

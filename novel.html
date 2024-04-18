@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novel</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <a href="#main" class="head_skip_hidden">Skip to main content</a>
+        <nav>
+            <img src="images/favicon.png" alt="A pile of books as the website logo" class="head_logo">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="novel.html" id="head_navbar_current">Novel</a></li>
+                <li><a href="other.html">Other</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <div id="head_description">
+            <h1>Booklist for Novels</h1>
+            <h2 class="head_subtitle">Lists of novels I'm interested in</h2>
+        </div>
+        <label class="book_checkbox" id="book_notes">
+            <input type="checkbox" name="book_note_hide" class="book_checkbox_box" onclick="changeNoteStatus(this)" checked>
+            <span>Hide notes to avoid spoilers</span>
+        </label>
+        <br>
+        <label class="book_checkbox" id="book_covers">
+            <input type="checkbox" name="book_cover_hide" class="book_checkbox_box" onclick="changeCoverStatus(this)">
+            <span>Hide covers for a simple view</span>
+        </label>
+        <br>
+        <input type="button" id="display_selection" value="Customize Your Booklist!">
+        <div id="book_selection">
+            <p id="book_selection_hint">Tick books you have read to reorganize the lists below:</p>
+            <label class="book_checkbox" id="book1_box">
+                <input type="checkbox" name="book1_box" class="book_checkbox_box" onclick="changeBookStatus('book1', this)" checked>
+                <span>Demons</span>
+            </label>
+            <label class="book_checkbox" id="book2_box">
+                <input type="checkbox" name="book2_box" class="book_checkbox_box" onclick="changeBookStatus('book2', this)" checked>
+                <span>Nineteen Eighty-Four</span>
+            </label>
+            <label class="book_checkbox" id="book3_box">
+                <input type="checkbox" name="book3_box" class="book_checkbox_box" onclick="changeBookStatus('book3', this)" checked>
+                <span>The Brothers Karamazov</span>
+            </label>
+            <label class="book_checkbox" id="book4_box">
+                <input type="checkbox" name="book4_box" class="book_checkbox_box" onclick="changeBookStatus('book4', this)" checked>
+                <span>The Idiot</span>
+            </label>
+            <label class="book_checkbox" id="book5_box">
+                <input type="checkbox" name="book5_box" class="book_checkbox_box" onclick="changeBookStatus('book5', this)" checked>
+                <span>The Master and Margarita</span>
+            </label>
+            <label class="book_checkbox" id="book6_box">
+                <input type="checkbox" name="book6_box" class="book_checkbox_box" onclick="changeBookStatus('book6', this)" checked>
+                <span>One Hundred Years of Solitude</span>
+            </label>
+            <label class="book_checkbox" id="book7_box">
+                <input type="checkbox" name="book7_box" class="book_checkbox_box" onclick="changeBookStatus('book7', this)">
+                <span>American Psycho</span>
+            </label>
+            <label class="book_checkbox" id="book8_box">
+                <input type="checkbox" name="book8_box" class="book_checkbox_box" onclick="changeBookStatus('book8', this)">
+                <span>Arch of Triumph</span>
+            </label>
+            <label class="book_checkbox" id="book9_box">
+                <input type="checkbox" name="book9_box" class="book_checkbox_box" onclick="changeBookStatus('book9', this)">
+                <span>The Adolescent</span>
+            </label>
+            <label class="book_checkbox" id="book10_box">
+                <input type="checkbox" name="book10_box" class="book_checkbox_box" onclick="changeBookStatus('book10', this)">
+                <span>The Plague</span>
+            </label>
+        </div>
+
+        <h2 class="booklist_head" id="booklist_read_head">Book Finished</h2>
+        <div class="booklist" id="booklist_read">
+            <div class="book_block" id="book1">
+                <img src="images/book_cover_novel_book1.jpg" alt="Book cover of Demons" class="book_cover" id="book1_cover">
+                <h3 class="book_title">Demons</h3>
+                <h4 class="book_author">Fyodor Dostoevsky</h4>
+                <div class="book_description">
+                    <p>The character of Kirillov is particularly intriguing. Despite valuing his life and having a longstanding friendship with Shatov, he chooses to commit suicide for completely philosophical reasons. This somehow makes Stavrogin's suicide more like an ironic escape.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book2">
+                <img src="images/book_cover_novel_book2.jpg" alt="Book cover of Nineteen Eighty-Four" class="book_cover" id="book2_cover">
+                <h3 class="book_title">Nineteen Eighty-Four</h3>
+                <h4 class="book_author">George Orwell</h4>
+                <div class="book_description">
+                    <p>Personally I think it is the most depressive one amoung the Dystopian Trilogy, perhaps the society described here is closer to our real life and the ending is also more real. I'm a bit confused with Julia's characterization, actually I feel like the heroines of the three books are all hard to unerstand.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book3">
+                <img src="images/book_cover_novel_book3.jpg" alt="Book cover of The Brothers Karamazov" class="book_cover" id="book3_cover">
+                <h3 class="book_title">The Brothers Karamazov</h3>
+                <h4 class="book_author">Fyodor Dostoevsky</h4>
+                <div class="book_description">
+                    <p>I always find it difficult to empathize with Dostoevsky's characters, perhaps because I'm an atheist. And this, as the first Dostoevsky's book I've read, is especially so. I really need to read it again some day to understand Ivan's inner struggle. By the way, I really like its Russian musical, the stage design is concise and powerful.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book4">
+                <img src="images/book_cover_novel_book4.jpg" alt="Book cover of The Idiot" class="book_cover" id="book4_cover">
+                <h3 class="book_title">The Idiot</h3>
+                <h4 class="book_author">Fyodor Dostoevsky</h4>
+                <div class="book_description">
+                    <p>Somehow I find Nastasya a bit similar to Grushenka, while Myshkin can't love her back as Dimitri due to his personality. This is the thir book of Dostoevsky I read and I start to realize that his writing tyle is really "insane", but this insanity can be extremely impressive. In the end, just like Dream of the Red Chamber, nothing left, only a landscape desolate and bare.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book5">
+                <img src="images/book_cover_novel_book5.jpg" alt="Book cover of The Master and Margarita" class="book_cover" id="book5_cover">
+                <h3 class="book_title">The Master and Margarita</h3>
+                <h4 class="book_author">Mikhail Bulgakov</h4>
+                <div class="book_description">
+                    <p>It reminds me of the firt time I read The Lord of the Rings. It doesn't have many big problems to discuss and I only need to play around Moscow together with the devils. The underlying plot is disturbing, but the overall story calms me that there are many other important things not related to the so called evil and good.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book6">
+                <img src="images/book_cover_novel_book6.jpg" alt="Book cover of One Hundred Years of Solitude" class="book_cover" id="book6_cover">
+                <h3 class="book_title">One Hundred Years of Solitude</h3>
+                <h4 class="book_author">Gabriel García Márquez</h4>
+                <div class="book_description">
+                    <p>It is more like a dream than a story. Each member of the Buendía family is vivid with unique traits and quirks. I can hardly tells any detailed interaction between them but reading the book feels like witnessing a magical world fade away. Unfortunately, I don't have much interest to dig into Latin American history to understand all metaphors within at current.</p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="booklist_head" id="booklist_unread_head">Book Unread</h2>
+        <div class="booklist" id="booklist_unread">
+            <div class="book_block" id="book7">
+                <img src="images/book_cover_novel_book7.jpg" alt="Book cover of American Psycho" class="book_cover" id="book7_cover">
+                <h3 class="book_title">American Psycho</h3>
+                <h4 class="book_author">Bret Easton Ellis</h4>
+                <div class="book_description">
+                    <p>I first heard of this book by its musical. Also want to watch the movie some day.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book8">
+                <img src="images/book_cover_novel_book8.jpg" alt="Book cover of Arch of Triumph" class="book_cover" id="book8_cover">
+                <h3 class="book_title">Arch of Triumph</h3>
+                <h4 class="book_author">Erich Maria Remarque</h4>
+                <div class="book_description">
+                    <p>Finished about half of it.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book9">
+                <img src="images/book_cover_novel_book9.jpg" alt="Book cover of The Adolescent" class="book_cover" id="book9_cover">
+                <h3 class="book_title">The Adolescent</h3>
+                <h4 class="book_author">Fyodor Dostoevsky</h4>
+                <div class="book_description">
+                    <p>Not started yet.</p>
+                </div>
+            </div>
+            <div class="book_block" id="book10">
+                <img src="images/book_cover_novel_book10.jpg" alt="Book cover of The Plague" class="book_cover" id="book10_cover">
+                <h3 class="book_title">The Plague</h3>
+                <h4 class="book_author">Albert Camus</h4>
+                <div class="book_description">
+                    <p>Recommended by my friend. Honestly I really can't read Camus' The Myth of Sisyphus but The Stranger makes me feel better.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <script src="js/function.js"></script>
+</body>
+
+</html>
